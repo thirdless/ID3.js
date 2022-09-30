@@ -15,10 +15,7 @@ async function id3(url){
         decoded = decode(decoder, blob),
         boundary = decoded.indexOf("TAG"),
         pairs = {},
-        last = 0,
-        details = original_content.querySelector(".details");
-
-    details.innerHTML = "";
+        last = 0;
 
     if(decoded.indexOf("ID3") !== 0)
         return;
