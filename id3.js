@@ -30,7 +30,7 @@ async function id3(url){
 
         if(prev != 0 && now != 0 && next == 0){
             let key = decode(decoder, blob.slice(last, i + 1)),
-                length = (blob[i + 1] << 24) + (blob[i + 2] << 16) + (blob[i + 3] << 8) + blob[i + 4],
+                length = (blob[i + 2] << 16) + (blob[i + 3] << 8) + blob[i + 4],
                 start = i + 8,
                 end = start + length - 1;
 
