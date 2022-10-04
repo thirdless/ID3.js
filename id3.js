@@ -21,7 +21,6 @@ async function id3(url){
         return;
 
     blob = blob.slice(10, boundary);
-    decoded = decode(decoder, blob);
 
     for(let i = 1; i < blob.length - 1; i++){
         let prev = blob[i - 1],
